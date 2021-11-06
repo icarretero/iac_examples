@@ -25,3 +25,5 @@ override.tf.json
 *_override.tf
 *_override.tf.json
 
+# Ignore lock files as we are pinning provider version
+*.lock.hcl
