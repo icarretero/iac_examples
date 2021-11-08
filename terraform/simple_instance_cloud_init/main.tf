@@ -59,7 +59,8 @@ resource "aws_security_group" "allow_traffic" {
 }
 
 data "template_file" "user_data" {
-  template = file("../../cloud-init/complete.yaml")
+  template = file("../../cloud-init/ssh_user.yaml")
+  # template = file("../../cloud-init/complete.yaml")
 }
 
 resource "aws_instance" "web_server" {
@@ -71,8 +72,4 @@ resource "aws_instance" "web_server" {
   user_data                   = data.template_file.user_data.rendered
 
   tags = var.tags
-}
-
-output "template" {
-  value = data.template_file.user_data.rendered
 }
