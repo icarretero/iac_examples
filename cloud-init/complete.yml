@@ -37,4 +37,4 @@ write_files:
       </html>
 
 runcmd:
-  - sudo systemctl nginx restart
+  - sudo systemctl restart nginx
