@@ -1,0 +1,8 @@
+---
+web_servers:
+  hosts:
+    web_server_1:
+      ansible_host: 34.243.246.139
+#   vars:
+#    ansible_user: administrator
+#    ansible_ssh_private_key_file: /path/to/ssh/key/server1.pem
